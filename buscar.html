@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar - Spotify</title>
+    <link rel="stylesheet" href="style.css?v=2.3">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/spotify_logo.jpg" alt="Spotify Logo">
+            <span>Spotify</span>
+        </div>
+        <nav id="main-nav"></nav>
+    </header>
+
+    <main class="main-content">
+        <section class="search-section">
+            <h2>Busca tu música favorita</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Artistas, canciones">
+                <button>Buscar</button>
+            </div>
+        </section>
+
+        <section class="genre-section">
+            <h2>Explorar géneros</h2>
+            <div class="genre-grid">
+                <a href="genero-rock.html" class="genre-card">
+                    <img src="https://picsum.photos/seed/rock/300/300" alt="Rock">
+                    <div class="genre-name">Rock</div>
+                </a>
+                <a href="genero-pop.html" class="genre-card">
+                    <img src="https://picsum.photos/seed/pop/300/300" alt="Pop">
+                    <div class="genre-name">Pop</div>
+                </a>
+                <a href="genero-electronica.html" class="genre-card">
+                    <img src="https://picsum.photos/seed/electronica/300/300" alt="Electrónica">
+                    <div class="genre-name">Electrónica</div>
+                </a>
+                <a href="genero-hiphop.html" class="genre-card">
+                    <img src="https://picsum.photos/seed/hiphop/300/300" alt="Hip-Hop">
+                    <div class="genre-name">Hip-Hop</div>
+                </a>
+                <a href="genero-clasica.html" class="genre-card">
+                    <img src="https://picsum.photos/seed/clasica/300/300" alt="Clásica">
+                    <div class="genre-name">Clásica</div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/spotify_logo.jpg" alt="Spotify Logo">
+            </div>
+        </div>
+    </footer>
+    <script src="javascript/navigation.js?v=2.3"></script>
+    <script src="javascript/songs.js?v=2.3"></script>
+    <script src="javascript/main.js?v=2.3"></script>
+    <script src="javascript/search.js?v=2.3"></script>
+</body>
+</html>

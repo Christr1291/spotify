@@ -1,1 +1,424 @@
-/* Add styles here */
+/* --- General --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+    background-color: #191414;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Header --- */
+header {
+    background-color: #5bd3ff; /* New Vibrant Blue */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #191414;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #191414;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* --- Main Content & Hero (Index) --- */
+main {
+    padding-top: 80px; /* Space for fixed header */
+}
+
+.main-content {
+    padding: 40px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - 80px); /* Full viewport height minus header */
+    background-image: linear-gradient(to bottom right, #ff8c00, #ffc107, #e91e63);
+    padding: 0 40px;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.hero button {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* --- General Content Sections (Descargar, Biblioteca) --- */
+.content-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.content-section h2, .search-section h2, .genre-section h2, .song-list-section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    color: #b3b3b3;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* --- Form Sections (Registro, Inicia Sesión) --- */
+.form-section {
+    background-color: #222;
+    padding: 80px 40px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.form-container input {
+    background-color: #333;
+    border: 1px solid #555;
+    color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-container input::placeholder {
+    color: #b3b3b3;
+}
+
+.form-container button {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* --- Search Page --- */
+.search-bar {
+    display: flex;
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    padding: 15px;
+    border-radius: 50px 0 0 50px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 0 30px;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.genre-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    height: 250px;
+}
+
+.genre-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.genre-card:hover img {
+    transform: scale(1.1);
+}
+
+.genre-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 30px 20px 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+/* --- Song List Pages --- */
+.song-list-section h2 {
+    text-transform: uppercase;
+    color: #1DB954;
+}
+
+.song-list {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.song-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #282828;
+    transition: background-color 0.2s ease;
+}
+
+.song-item:hover {
+    background-color: #282828;
+    border-radius: 4px;
+}
+
+.song-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.song-artist {
+    color: #b3b3b3;
+}
+
+/* --- Modern Song List --- */
+.song-list-modern {
+    max-width: 800px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.song-item-modern {
+    display: flex;
+    align-items: center;
+    background-color: #282828;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    position: relative; /* Needed for positioning the options menu */
+}
+
+.song-item-modern:hover {
+    background-color: #383838;
+}
+
+.song-cover-art {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.song-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.song-title-modern {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.song-artist-modern {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+}
+
+.download-button {
+    background: none;
+    border: none;
+    color: #1DB954;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-button:hover {
+    background-color: rgba(29, 185, 84, 0.1);
+}
+
+/* --- Library Song Player & Options --- */
+.song-player audio {
+    margin: 0 15px;
+    flex-shrink: 1;
+    min-width: 250px;
+}
+
+/* Hide unwanted audio controls */
+audio::-webkit-media-controls-playback-rate-button {
+    display: none;
+}
+audio::-webkit-media-controls-volume-slider {
+    margin-left: -10px; /* Adjust spacing after hiding rate button */
+}
+
+.song-options {
+    position: relative; /* For dropdown positioning */
+}
+
+.options-button {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options-button:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.options-dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #383838;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    z-index: 10;
+    overflow: hidden;
+    width: 200px; /* Wider menu */
+}
+
+.options-dropdown.show {
+    display: block; /* Show menu */
+}
+
+.options-dropdown button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.options-dropdown button:hover {
+    background-color: #484848;
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: black;
+    padding: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 40px;
+}

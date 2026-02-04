@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Spotify</title>
+    <link rel="stylesheet" href="style.css?v=2.2">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/spotify_logo.jpg" alt="Spotify Logo">
+            <span>Spotify</span>
+        </div>
+        <nav id="main-nav"></nav>
+    </header>
+
+    <main class="main-content">
+        <section class="song-list-section">
+            <h2>Tu Biblioteca</h2>
+            <div id="library-container" class="song-list-modern">
+                <!-- Las canciones guardadas se cargarán aquí dinámicamente -->
+            </div>
+            <p id="empty-library-message" style="display: none; text-align: center; color: #b3b3b3;">Aún no has añadido ninguna canción a tu biblioteca. ¡Ve a buscar y empieza a guardar!</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/spotify_logo.jpg" alt="Spotify Logo">
+            </div>
+        </div>
+    </footer>
+    <script src="javascript/songs.js?v=2.2"></script>
+    <script src="javascript/main.js?v=2.2"></script>
+    <script src="javascript/navigation.js?v=2.2"></script>
+    <script src="javascript/library.js?v=2.2"></script>
+</body>
+</html>
